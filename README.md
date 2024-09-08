@@ -37,6 +37,8 @@ This structure outlines the main components of the project.
 
 The Stroke Risk Prediction API is a machine learning-based service that predicts the risk of stroke based on various health and lifestyle factors.
 
+By improving the identification of high-risk individuals, especially those in the minority class, this model could have the potential to enhance early intervention strategies for stroke prevention. While the current models show limitations in precision, their improved recall for the minority class could lead to more comprehensive screening processes, potentially reducing the overall incidence and impact of strokes. The project also highlights the challenges in predicting rare events like strokes and provides a foundation for further research in handling imbalanced healthcare datasets.
+
 ### Dataset
 
 The project utilizes the [Stroke Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset) from Kaggle.
