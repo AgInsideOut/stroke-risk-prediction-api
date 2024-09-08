@@ -17,19 +17,19 @@ This repository contains the deployment code for the Stroke Risk Prediction mode
 
 ## Project Structure
 
-    ```bash
-    stroke-risk-prediction-api/
-    │
-    ├── README.md
-    ├── LICENSE
-    ├── requirements.txt
-    ├── Dockerfile
-    ├── .gitignore
-    ├── main.py
-    ├── best_model.joblib
-    └── tests/
-        └── test_api.py
-    ```
+```
+stroke-risk-prediction-api/
+│
+├── README.md
+├── LICENSE
+├── requirements.txt
+├── Dockerfile
+├── .gitignore
+├── main.py
+├── best_model.joblib
+└── tests/
+    └── test_api.py
+```
 
 This structure outlines the main components of the project.
 
@@ -121,18 +121,23 @@ To run the API locally:
 
 ## Model Information
 
-The model used in this API is a machine learning classifier trained to predict stroke risk. Here are some key performance metrics:
+The model used in this API is an Easy Ensemble Classifier trained to predict stroke risk. This model was chosen for its ability to handle imbalanced datasets and its high recall for the minority class. Here are some key performance metrics:
 
-- Precision (Class 1): 0.180723
-- Recall (Class 1): 0.3
-- F1 (Class 1): 0.225564
-- F0.5 Score: 0.227273
-- F1 Score: 0.225564
-- F2 Score: 0.321782
-- Prediction Balance (Class 1): 0.081213
-- Optimal Threshold (F1): 0.10101
+Precision (Class 1): 0.1135
+Recall (Class 1): 0.8641
+F1 (Class 1): 0.2008
+Balanced Accuracy: 0.7613
+F2 Score: 0.3523
 
-Note: These metrics are for the positive class (high risk of stroke). The model's performance should be interpreted in the context of early risk identification, where higher recall might be preferred over precision.
+Note: These metrics are for the positive class (high risk of stroke). The model's performance should be interpreted in the context of early risk identification, where higher recall is preferred over precision. This model excels at identifying potential stroke cases, which is crucial for early intervention and prevention strategies.
+
+Key points:
+
+1. High Recall: The model correctly identifies 86.41% of actual stroke cases, which is essential for a health screening tool.
+2. Balanced Accuracy: The model achieves a balanced accuracy of 76.13%, indicating good overall performance considering both classes.
+3. Trade-off: While precision is low, this is acceptable in a medical context where missing a potential stroke case (false negative) is generally considered more costly than a false positive.
+
+This model is particularly suitable for initial screening, where capturing as many potential stroke cases as possible is the primary goal. Follow-up assessments can then be conducted to confirm the risk for individuals flagged by the model.
 
 ## Authors
 
