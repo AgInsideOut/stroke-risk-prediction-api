@@ -35,7 +35,7 @@ This structure outlines the main components of the project.
 
 ## Introduction
 
-The Stroke Risk Prediction API is a machine learning-based service that predicts the risk of stroke based on various health and lifestyle factors. This project is part of a data science study at Turing College.
+The Stroke Risk Prediction API is a machine learning-based service that predicts the risk of stroke based on various health and lifestyle factors.
 
 ### Dataset
 
