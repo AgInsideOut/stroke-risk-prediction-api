@@ -9,6 +9,7 @@ This repository contains the deployment code for the Stroke Risk Prediction mode
 - [Installation](#installation)
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
+- [Testing the API](#testing-the-api)
 - [Model Information](#model-information)
 - [Authors](#authors)
 - [License](#license)
@@ -67,6 +68,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Usage
 
+The API is live and can be accessed at:
+<https://stroke-risk-prediction-api.onrender.com>
+
 To run the API locally:
 
 1. Ensure you're in the project directory.
@@ -80,14 +84,16 @@ To run the API locally:
 
 ## API Endpoints
 
+Base URL: <https://stroke-risk-prediction-api.onrender.com>
+
 1. **Root Endpoint**
-   - URL: `/`
+   - URL: `https://stroke-risk-prediction-api.onrender.com/`
    - Method: GET
    - Description: Welcome message for the API.
    - Response: `{"message": "Welcome to the Stroke Prediction API"}`
 
 2. **Prediction Endpoint**
-   - URL: `/predict`
+   - URL: `https://stroke-risk-prediction-api.onrender.com/predict`
    - Method: POST
    - Description: Predicts stroke risk based on input features.
    - Request Body: JSON object with the following fields:
@@ -118,6 +124,37 @@ To run the API locally:
      ```
 
    - Response: `{"prediction": int}` (0 for low risk, 1 for high risk)
+
+## Testing the API
+
+You can test the live API using curl or any API testing tool. Here's an example using curl:
+
+```bash
+curl -X POST "https://stroke-risk-prediction-api.onrender.com/predict" \
+     -H "Content-Type: application/json" \
+     -d '{
+       "age": 65.0,
+       "hypertension": 1,
+       "heart_disease": 0,
+       "ever_married": 1,
+       "avg_glucose_level": 100.0,
+       "bmi": 28.5,
+       "gender_Male": 1,
+       "gender_Female": 0,
+       "gender_Other": 0,
+       "work_type_Govt_job": 0,
+       "work_type_Never_worked": 0,
+       "work_type_Private": 1,
+       "work_type_Self_employed": 0,
+       "work_type_children": 0,
+       "Residence_type_Rural": 0,
+       "Residence_type_Urban": 1,
+       "smoking_status_formerly_smoked": 1,
+       "smoking_status_smokes": 0,
+       "smoking_status_Unknown": 0,
+       "smoking_status_never_smoked": 0
+     }
+```
 
 ## Model Information
 
