@@ -4,10 +4,12 @@ WORKDIR /code
 
 COPY ./requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+RUN pip install imbalanced-learn
 
 RUN pip list
 RUN which uvicorn
 RUN python -c "import uvicorn; print(uvicorn.__file__)"
+RUN python -c "import imblearn; print(imblearn.__file__)"
 
 COPY . /code
 
