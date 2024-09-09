@@ -161,11 +161,10 @@ curl -X POST "https://stroke-risk-prediction-api.onrender.com/predict" \
 
 The model used in this API is an Easy Ensemble Classifier trained to predict stroke risk. This model was chosen for its ability to handle imbalanced datasets and its high recall for the minority class. Here are some key performance metrics:
 
-Precision (Class 1): 0.1135
-Recall (Class 1): 0.8641
-F1 (Class 1): 0.2008
-Balanced Accuracy: 0.7613
-F2 Score: 0.3523
+- Precision (Class 1): 0.1429
+- Recall (Class 1): 0.2000
+- F1 Score (Class 1): 0.1667
+- Class 1 F-2 Score: 0.1852
 
 Note: These metrics are for the positive class (high risk of stroke). The model's performance should be interpreted in the context of early risk identification, where higher recall is preferred over precision. This model excels at identifying potential stroke cases, which is crucial for early intervention and prevention strategies.
 
