@@ -5,7 +5,7 @@ requests
 catboost
 dowhy
 fastapi
-imblearn
+imbalanced-learn
 joblib
 lightgbm
 matplotlib
