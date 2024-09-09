@@ -25,10 +25,11 @@ stroke-risk-prediction-api/
 ├── LICENSE
 ├── requirements.txt
 ├── Dockerfile
+├── entrypoints.sh
 ├── .gitignore
 ├── main.py
 ├── best_model.joblib
-└── tests/
+└── test/
     └── test_api.py
 ```
 
